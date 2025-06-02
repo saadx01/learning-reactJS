@@ -10,23 +10,26 @@ function Header(props) {
 
     const navLinks = [
         {
-            name: "Home"
+            name: "Home",
+            url: ""
         },
                 {
-            name: "Teams"
+            name: "Teams",
+            url: "teams"
         },
                 {
-            name: "Tournament"
+            name: "Tournament",
+            url: "tournaments"
         }
     ]
 
     return (
         <div className='bg-white w-full p-2 flex flex-row justify-between'>
             <Image src={logo} height={100} width={100} />
-            <ul className='flex gap-[6px]'>
+            <ul className='flex gap-6'>
             {
                 navLinks.map((nav, index) => {
-                    return <Navlink key={index} name={nav.name} />
+                    return <Navlink key={index} name={nav.name} url={nav.url}/>
                 })
             }
                 {/* <Navlink name={"Home"} />

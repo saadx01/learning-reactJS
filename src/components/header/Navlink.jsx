@@ -1,13 +1,17 @@
+import Link from 'next/link';
 import React from 'react';
 
 function Navlink(props) {
-    // const props = true;
-    const isValid = props ? "yes" : "no";
-    
     return (
-        <li className=''>
-            {props?.name}
-        </li>
+        <div>
+            <Link href={`/${props.url}`}>
+                <li>
+                    {props?.name}
+                </li>
+            </Link>
+        </div>
+
+
     );
 }
 
